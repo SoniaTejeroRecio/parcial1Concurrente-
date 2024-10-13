@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.Componentes.Componente;
+
 public class Consumidor extends Thread {
     private BufferCompartido buffer;
 
@@ -11,16 +13,12 @@ public class Consumidor extends Thread {
     public void run() {
         try {
             while (true) {
-                String componente = buffer.consumir();
-                ensamblar(componente);
+                Componente componente = buffer.consumir();
+                componente.ensamblar(); //Llama al método ensamblar del componente
                 Thread.sleep(1500); //Simula el tiempo de ensamblaje
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-    }
-
-    private void ensamblar(String componente) {
-        System.out.println("Ensamblando componente: " + componente);
     }
 }
