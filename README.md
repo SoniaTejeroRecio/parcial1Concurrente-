@@ -5,6 +5,8 @@ Link al repositorio: https://github.com/SoniaTejeroRecio/parcial1Concurrente-.gi
 
 # Simulación de la Máquina de Galton en la Fábrica de Campanas de Gauss
 
+Proyecto de Sonia Tejero y Sira González-Madroño
+
 ## Descripción
 
 Este proyecto simula el funcionamiento de una fábrica que produce máquinas basadas en el tablero de Galton, un dispositivo que demuestra la distribución normal. La simulación utiliza hilos para modelar la concurrencia en la producción de componentes y su posterior ensamblaje en la línea de producción. La visualización de la distribución de bolas en los contenedores inferiores se realiza utilizando JavaFX.
