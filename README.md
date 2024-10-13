@@ -36,6 +36,22 @@ Este proyecto simula el funcionamiento de una fábrica que produce máquinas bas
    - Representa el tablero de Galton utilizando JavaFX.
    - Crea una visualización de los contenedores donde las bolas caen, simulando el lanzamiento de bolas que se distribuyen en los contenedores inferiores.
    - Utiliza animaciones para mostrar el movimiento de las bolas a medida que caen a través del tablero.
+6. **FabricaComponentes**:
+
+   - Clase responsable de la creación de componentes necesarios para la máquina de Galton.
+   - Implementa un método que produce diferentes tipos de componentes según la demanda.
+7. **Componente**:
+
+   - Clase que representa los diferentes componentes que pueden ser producidos por la fábrica, como clavos y bolas.
+   - Incluye propiedades que describen cada componente, como el tipo y la cantidad.
+8. **Clavo**:
+
+   - Clase que extiende `Componente` y representa los clavos que forman parte de la máquina de Galton.
+   - Contiene métodos específicos para la producción y manipulación de clavos.
+9. **Bola**:
+
+   - Clase que extiende `Componente` y representa las bolas que caen a través del tablero de Galton.
+   - Incluye propiedades relacionadas con el comportamiento de las bolas durante la simulación.
 
 ## Funcionamiento
 
