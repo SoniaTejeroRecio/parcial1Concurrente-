@@ -54,6 +54,11 @@ Este proyecto simula el funcionamiento de una fábrica que produce máquinas bas
 
    - Clase que extiende `Componente` y representa las bolas que caen a través del tablero de Galton.
    - Incluye propiedades relacionadas con el comportamiento de las bolas durante la simulación.
+10. **Scheduler**:
+
+    - Clase que gestiona la ejecución de los hilos productores utilizando un algoritmo de *Round Robin Scheduling*.
+    - Asegura que cada productor tenga un tiempo de ejecución equitativo para la producción de componentes.
+    - Recibe una lista de productores y un tiempo fijo por turno para cada uno.
 
 ## Funcionamiento
 

@@ -1,19 +1,27 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         BufferCompartido buffer = new BufferCompartido(10);
 
-        // Creación de productores para diferentes componentes
-        Productor productor1 = new Productor(buffer, "Clavo");
-        Productor productor2 = new Productor(buffer, "Bola");
+        //Lista de productores
+        List<Productor> productores = new ArrayList<>();
+        productores.add(new Productor(buffer, "Clavo"));
+        productores.add(new Productor(buffer, "Bola"));
+
+        //Creación del scheduler
+        Scheduler scheduler = new Scheduler(productores, 1000); //Tiempo por turno en milisegundos
 
         // Creación de consumidor (línea de ensamblaje)
         Consumidor ensamblador = new Consumidor(buffer);
 
-        // Inicio de los hilos
-        productor1.start();
-        productor2.start();
+        // Iniciar el ensamblador
         ensamblador.start();
+
+        //Iniciar el scheduler
+        scheduler.iniciar();
     }
 }
