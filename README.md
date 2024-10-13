@@ -63,6 +63,7 @@ Este proyecto simula el funcionamiento de una fábrica que produce máquinas bas
 ## Funcionamiento
 
 - La aplicación comienza creando una instancia de `BufferCompartido`, que actúa como el punto de comunicación entre los hilos productores y el consumidor.
+- Se inicializa la clase `Scheduler`, que gestiona la ejecución de los hilos productores utilizando un algoritmo de *Round Robin Scheduling* para asegurar que cada productor tenga un tiempo de ejecución equitativo.
 - Se inician varios hilos productores, cada uno de los cuales produce un tipo de componente diferente.
 - Un hilo consumidor se encarga de ensamblar los componentes producidos, tomando componentes del buffer compartido.
 - El `BufferCompartido` se sincroniza para evitar que los productores intenten añadir componentes cuando el buffer está lleno y para que el consumidor no intente consumir cuando el buffer está vacío.
